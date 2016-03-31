@@ -1,9 +1,9 @@
-<?php namespace Leean\Elements\Options;
+<?php namespace Lean\Elements\Options;
 
 /**
  * Class ContactDetails.
  *
- * @package Leean\Elements\Options
+ * @package Lean\Elements\Options
  */
 class ContactDetails
 {

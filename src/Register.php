@@ -1,6 +1,6 @@
-<?php namespace Leean\Elements;
+<?php namespace Lean\Elements;
 
-use Leean\Elements\Options;
+use Lean\Elements\Options;
 
 /**
  * Class to provide predefined ACF elements.
