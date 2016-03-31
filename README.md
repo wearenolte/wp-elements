@@ -1,6 +1,6 @@
 # WP Elements
 
-> Predefined ACF groups
+> Predefined ACF groups like ContactDetails, SocialLinks or Hero. We will be adding more as we need them.
 
 
 ## Getting Started
