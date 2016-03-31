@@ -39,7 +39,10 @@ class Register
 	 */
 	public static function register_elements() {
 		foreach ( self::$_elements as $element ) {
-			call_user_func( [ __NAMESPACE__ . '\\Options\\' . $element, 'init' ], self::$_location );
+			$class = __NAMESPACE__ . '\\Options\\' . $element;
+			if ( method_exists( [ $class, 'init' ] ) ) {
+				call_user_func( [ $class, 'init' ], self::$_location );
+			}
 		}
 	}
 }
