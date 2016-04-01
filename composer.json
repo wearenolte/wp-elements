@@ -1,8 +1,8 @@
 {
-  "name": "moxie-leean/wp-elements",
+  "name": "moxie-lean/wp-elements",
   "description": "Predefined ACF groups.",
   "keywords": ["wordpress"],
-  "homepage": "https://github.com/moxie-leean/wp-elements",
+  "homepage": "https://github.com/moxie-lean/wp-elements",
   "type": "library",
   "license": "MIT",
   "authors": [
