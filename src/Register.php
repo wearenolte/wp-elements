@@ -1,7 +1,5 @@
 <?php namespace Lean\Elements;
 
-use Lean\Elements\Options;
-
 /**
  * Class to provide predefined ACF elements.
  */
