@@ -8,13 +8,6 @@ use Lean\Elements\Options;
 class Register
 {
 	/**
-	 * The location for the elements.
-	 *
-	 * @var array
-	 */
-	private static $_location = [];
-
-	/**
 	 * Registered elements.
 	 *
 	 * @var array
@@ -27,9 +20,11 @@ class Register
 	 * @param array $location Array suitable for ACF location parameter.
 	 * @param arrat $elements Array of element names to show in this location.
 	 */
-	public static function init( $location, $elements ) {
-		self::$_location = $location;
-		self::$_elements = $elements;
+	public static function add( $element, $location ) {
+		if ( ! isset( self::$_elements[ $location ] ) ) {
+			self::$_elements[ $location ] = [];
+		}
+		self::$_elements[ $location ][] = $element;
 
 		add_action( 'init', [ __CLASS__, 'register_elements' ] );
 	}
@@ -38,10 +33,12 @@ class Register
 	 * Register required elements in a location.
 	 */
 	public static function register_elements() {
-		foreach ( self::$_elements as $element ) {
-			$class = __NAMESPACE__ . '\\Options\\' . $element;
-			if ( method_exists( $class, 'init' ) ) {
-				call_user_func( [ $class, 'init' ], self::$_location );
+		foreach ( self::$_elements as $location => $elements ) {
+			foreach ( $elements as $element ) {
+				$class = __NAMESPACE__ . '\\Options\\' . $element;
+				if ( method_exists( $class, 'init' ) ) {
+					call_user_func( [ $class, 'init' ], $location );
+				}
 			}
 		}
 	}

@@ -122,7 +122,15 @@ class ContactDetails
 						'append' => '',
 					),
 				),
-				'location' => $location,
+				'location' => array(
+					array(
+						array(
+							'param' => 'options_page',
+							'operator' => '==',
+							'value' => $location,
+						),
+					),
+				),
 				'menu_order' => 0,
 				'position' => 'normal',
 				'style' => 'default',
