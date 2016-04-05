@@ -32,13 +32,30 @@ include '/vendor/autoload.php';
 
 ## Usage
 
-You need to register the elements you want to use using the ```Elements::init()``` function. This function takes the following parameters: $location and $element.
+You need to register the elements you want to use using the ```Elements::add()``` function. This function takes the following parameters: $element and $location.
 
 ```php
-\Lean\Elements\Register::init(
-	$location,
-	[ 'ContactDetails', 'SocialIcons' ]
+\Lean\Elements\Register::add(
+	'SiteIdentity',
+	$location
 );
 ```
 
-Note that $location is an array with the format of the ACF 'location' parameter.
+Note that $location is an array with the format of the ACF 'location' parameter. For some elements $location can be left blank and the default location will be used instead.
+
+There is also a shortcut function to add an options page, with predefined sub-pages (currently only GENERAL_PAGE is implemented).
+
+```php
+\Lean\Elements\Register::options_page( [
+    Register::GENERAL_PAGE,
+] );
+```
+
+
+### Elements
+
+The following elements are provided:
+
+`SiteIdentity`: The site logo. Defaults to the options page if $location is blank.
+
+`ContactDetails`: Address, phone and email. Defaults to the options page if $location is blank.
