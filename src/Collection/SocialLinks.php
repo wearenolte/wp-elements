@@ -92,7 +92,7 @@ class SocialLinks
 							),
 							array(
 								'key' => 'field_5703fef9a8495',
-								'label' => 'Open in a new window',
+								'label' => 'New window',
 								'name' => 'new_window',
 								'type' => 'true_false',
 								'instructions' => '',
