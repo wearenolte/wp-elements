@@ -61,9 +61,7 @@ class SiteIdentity
 						'mime_types' => '',
 					),
 				),
-				'location' => array(
-					$locations
-				),
+				'location' => array( $locations ),
 				'menu_order' => 0,
 				'position' => 'normal',
 				'style' => 'default',
