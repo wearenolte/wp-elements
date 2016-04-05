@@ -34,7 +34,7 @@ class SiteIdentity
 
 			acf_add_local_field_group( array(
 				'key' => 'group_570317cf540d9',
-				'title' => 'Site Indentity',
+				'title' => 'Site Identity',
 				'fields' => array(
 					array(
 						'key' => self::LOGO_KEY,
