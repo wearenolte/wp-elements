@@ -59,8 +59,8 @@ class ContactDetails
 					),
 					array(
 						'key' => 'field_56fd2a5ab4f1c',
-						'label' => 'Adress',
-						'name' => 'adress',
+						'label' => 'Address',
+						'name' => 'address',
 						'type' => 'text',
 						'instructions' => '',
 						'required' => 0,
