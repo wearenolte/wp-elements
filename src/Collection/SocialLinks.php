@@ -37,7 +37,7 @@ class SocialLinks
 					array(
 						'key' => 'field_57028873c1ed8',
 						'label' => 'Items',
-						'name' => 'items',
+						'name' => 'social_links',
 						'type' => 'repeater',
 						'instructions' => '',
 						'required' => 0,
@@ -109,9 +109,7 @@ class SocialLinks
 						),
 					),
 				),
-				'location' => array(
-					$locations
-				),
+				'location' => array( $locations ),
 				'menu_order' => 0,
 				'position' => 'normal',
 				'style' => 'default',
