@@ -104,7 +104,7 @@ class SocialLinks
 									'id' => '',
 								),
 								'message' => '',
-								'default_value' => 0,
+								'default_value' => 1,
 							),
 						),
 					),
