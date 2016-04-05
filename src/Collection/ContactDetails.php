@@ -1,16 +1,33 @@
-<?php namespace Lean\Elements\Options;
+<?php namespace Lean\Elements\Collection;
+
+use Lean\Elements\Register;
 
 /**
  * Class ContactDetails.
  *
- * @package Lean\Elements\Options
+ * @package Lean\Elements\Collection
  */
 class ContactDetails
 {
 	/**
-	 * Initialise the fields
+	 * Get the element's default location.
+	 *
+	 * @return array
 	 */
-	 public static function init( $location ) {
+	public static function get_default_location() {
+		return array(
+			'param' => 'options_page',
+			'operator' => '==',
+			'value' => Register::OPTIONS_PAGE,
+		);
+	}
+
+	/**
+	 * Initialise the fields.
+	 *
+	 * @param array $locations The locations where we want this group to appear.
+	 */
+	 public static function init( $locations ) {
 		if ( function_exists( 'acf_add_local_field_group' ) ) {
 			acf_add_local_field_group( array(
 				'key' => 'group_56fd2972b29d5',
@@ -123,13 +140,7 @@ class ContactDetails
 					),
 				),
 				'location' => array(
-					array(
-						array(
-							'param' => 'options_page',
-							'operator' => '==',
-							'value' => $location,
-						),
-					),
+					$locations,
 				),
 				'menu_order' => 0,
 				'position' => 'normal',
