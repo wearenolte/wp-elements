@@ -34,27 +34,6 @@ class ContactDetails
 				'title' => 'Contact Details',
 				'fields' => array(
 					array(
-						'key' => 'field_56fd2a48b4f1a',
-						'label' => 'Title',
-						'name' => 'title',
-						'type' => 'text',
-						'instructions' => '',
-						'required' => 0,
-						'conditional_logic' => 0,
-						'wrapper' => array(
-							'width' => '',
-							'class' => '',
-							'id' => '',
-						),
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'maxlength' => '',
-						'readonly' => 0,
-						'disabled' => 0,
-					),
-					array(
 						'key' => 'field_56fd2a53b4f1b',
 						'label' => 'Logo',
 						'name' => 'logo',

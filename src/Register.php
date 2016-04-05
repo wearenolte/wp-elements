@@ -43,6 +43,12 @@ class Register
 		add_action( 'init', [ __CLASS__, 'register_elements' ] );
 	}
 
+	/**
+	 * Get an element's class name.
+	 *
+	 * @param string $element The element.
+	 * @return string
+	 */
 	public static function get_element_class_name( $element ) {
 		return __NAMESPACE__ . '\\Collection\\' . $element;
 	}
