@@ -38,7 +38,7 @@ class ContactDetails
 					array(
 						'key' => self::LOGO_KEY,
 						'label' => 'Logo',
-						'name' => 'logo',
+						'name' => 'contact_details_logo',
 						'type' => 'image',
 						'instructions' => '',
 						'required' => 0,
@@ -62,7 +62,7 @@ class ContactDetails
 					array(
 						'key' => 'field_56fd2a5ab4f1c',
 						'label' => 'Address',
-						'name' => 'address',
+						'name' => 'contact_details_address',
 						'type' => 'text',
 						'instructions' => '',
 						'required' => 0,
@@ -83,7 +83,7 @@ class ContactDetails
 					array(
 						'key' => 'field_56fd2a65b4f1d',
 						'label' => 'Phone',
-						'name' => 'phone',
+						'name' => 'contact_details_phone',
 						'type' => 'text',
 						'instructions' => '',
 						'required' => 0,
@@ -104,7 +104,7 @@ class ContactDetails
 					array(
 						'key' => 'field_56fd2a69b4f1e',
 						'label' => 'Email',
-						'name' => 'email',
+						'name' => 'contact_details_email',
 						'type' => 'email',
 						'instructions' => '',
 						'required' => 0,
@@ -120,9 +120,7 @@ class ContactDetails
 						'append' => '',
 					),
 				),
-				'location' => array(
-					$locations,
-				),
+				'location' => array( $locations ),
 				'menu_order' => 0,
 				'position' => 'normal',
 				'style' => 'default',
