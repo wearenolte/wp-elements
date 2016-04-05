@@ -33,8 +33,8 @@ class SocialLinks
 			acf_add_local_field_group( array(
 				'key' => 'group_5702884df1213',
 				'title' => 'Social Links',
-				'fields' => array (
-					array (
+				'fields' => array(
+					array(
 						'key' => 'field_57028873c1ed8',
 						'label' => 'Items',
 						'name' => 'items',
@@ -42,7 +42,7 @@ class SocialLinks
 						'instructions' => '',
 						'required' => 0,
 						'conditional_logic' => 0,
-						'wrapper' => array (
+						'wrapper' => array(
 							'width' => '',
 							'class' => '',
 							'id' => '',
@@ -52,8 +52,8 @@ class SocialLinks
 						'max' => '',
 						'layout' => 'table',
 						'button_label' => 'Add Row',
-						'sub_fields' => array (
-							array (
+						'sub_fields' => array(
+							array(
 								'key' => 'field_5702887ec1ed9',
 								'label' => 'Network',
 								'name' => 'network',
@@ -61,7 +61,7 @@ class SocialLinks
 								'instructions' => '',
 								'required' => 0,
 								'conditional_logic' => 0,
-								'wrapper' => array (
+								'wrapper' => array(
 									'width' => '',
 									'class' => '',
 									'id' => '',
@@ -74,7 +74,7 @@ class SocialLinks
 								'readonly' => 0,
 								'disabled' => 0,
 							),
-							array (
+							array(
 								'key' => 'field_57028883c1eda',
 								'label' => 'Link',
 								'name' => 'link',
@@ -82,7 +82,7 @@ class SocialLinks
 								'instructions' => '',
 								'required' => 0,
 								'conditional_logic' => 0,
-								'wrapper' => array (
+								'wrapper' => array(
 									'width' => '',
 									'class' => '',
 									'id' => '',
@@ -90,7 +90,7 @@ class SocialLinks
 								'default_value' => '',
 								'placeholder' => '',
 							),
-							array (
+							array(
 								'key' => 'field_5703fef9a8495',
 								'label' => 'Open in a new window',
 								'name' => 'new_window',
@@ -98,7 +98,7 @@ class SocialLinks
 								'instructions' => '',
 								'required' => 0,
 								'conditional_logic' => 0,
-								'wrapper' => array (
+								'wrapper' => array(
 									'width' => '',
 									'class' => '',
 									'id' => '',
