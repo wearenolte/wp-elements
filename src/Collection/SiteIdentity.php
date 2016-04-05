@@ -3,12 +3,14 @@
 use Lean\Elements\Register;
 
 /**
- * Class SiteLogo.
+ * Class SiteIdentity.
  *
  * @package Lean\Elements\Collection
  */
-class SiteLogo
+class SiteIdentity
 {
+	const LOGO_KEY = 'field_570317e13e3f9';
+
 	/**
 	 * Get the element's default location.
 	 *
@@ -35,7 +37,7 @@ class SiteLogo
 				'title' => 'Site Indentity',
 				'fields' => array(
 					array(
-						'key' => 'field_570317e13e3f9',
+						'key' => self::LOGO_KEY,
 						'label' => 'Logo',
 						'name' => 'site_logo',
 						'type' => 'image',

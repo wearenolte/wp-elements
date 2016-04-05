@@ -9,6 +9,8 @@ use Lean\Elements\Register;
  */
 class ContactDetails
 {
+	const LOGO_KEY = 'field_56fd2a53b4f1b';
+
 	/**
 	 * Get the element's default location.
 	 *
@@ -34,7 +36,7 @@ class ContactDetails
 				'title' => 'Contact Details',
 				'fields' => array(
 					array(
-						'key' => 'field_56fd2a53b4f1b',
+						'key' => self::LOGO_KEY,
 						'label' => 'Logo',
 						'name' => 'logo',
 						'type' => 'image',
