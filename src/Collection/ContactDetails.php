@@ -140,7 +140,7 @@ class ContactDetails
 						'prepend' => '',
 						'append' => '',
 					),
-					array (
+					array(
 						'key' => 'field_57053bc317d90',
 						'label' => 'Directions',
 						'name' => 'directions',
@@ -148,7 +148,7 @@ class ContactDetails
 						'instructions' => '',
 						'required' => 0,
 						'conditional_logic' => 0,
-						'wrapper' => array (
+						'wrapper' => array(
 							'width' => '',
 							'class' => '',
 							'id' => '',
