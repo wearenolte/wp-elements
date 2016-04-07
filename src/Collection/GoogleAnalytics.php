@@ -34,7 +34,7 @@ class GoogleAnalytics
 					array(
 						'key' => 'field_570681cc43f79',
 						'label' => 'UID',
-						'name' => 'uid',
+						'name' => 'google_analytics_uid',
 						'type' => 'text',
 						'instructions' => 'Fill in your Google Analytics ID',
 						'required' => 0,
