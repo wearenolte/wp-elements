@@ -10,6 +10,21 @@ use Lean\Elements\Register;
 class SocialLinks
 {
 	/**
+	 * List of networks available.
+	 */
+	const CHOICES = [
+		'facebook' => 'Facebook',
+		'twitter' => 'Twitter',
+		'instagram' => 'Instagram',
+		'linkedin' => 'LinkedIn',
+	];
+
+	/**
+	 * Filter name for filtering networks.
+	 */
+	const FILTER = 'ln_elements_social_links';
+
+	/**
 	 * Get the element's default location.
 	 *
 	 * @return array
@@ -57,22 +72,24 @@ class SocialLinks
 								'key' => 'field_5702887ec1ed9',
 								'label' => 'Network',
 								'name' => 'network',
-								'type' => 'text',
+								'type' => 'select',
 								'instructions' => '',
-								'required' => 0,
+								'required' => 1,
 								'conditional_logic' => 0,
 								'wrapper' => array(
 									'width' => '',
 									'class' => '',
 									'id' => '',
 								),
-								'default_value' => '',
+								'choices' => apply_filters( self::FILTER, self::CHOICES ),
+								'default_value' => array(),
+								'allow_null' => 0,
+								'multiple' => 0,
+								'ui' => 1,
+								'ajax' => 0,
 								'placeholder' => '',
-								'prepend' => '',
-								'append' => '',
-								'maxlength' => '',
-								'readonly' => 0,
 								'disabled' => 0,
+								'readonly' => 0,
 							),
 							array(
 								'key' => 'field_57028883c1eda',
