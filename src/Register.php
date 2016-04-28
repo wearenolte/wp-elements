@@ -32,12 +32,12 @@ class Register
 			$default_location = self::get_default_location( $element );
 
 			if ( $default_location ) {
-				self::$_elements[ $element ][] = $default_location;
+				self::$_elements[ $element ][] = [ $default_location ];
 			} else {
 				throw new \Exception( 'Element ' . $element . ' does not have a default location. You must supply the $location parameter.' );
 			}
 		} else {
-			self::$_elements[ $element ][] = $location;
+			self::$_elements[ $element ][] = [ $location ];
 		}
 
 		add_action( 'init', [ __CLASS__, 'register_elements' ] );

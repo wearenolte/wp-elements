@@ -126,7 +126,7 @@ class SocialLinks
 						),
 					),
 				),
-				'location' => array( $locations ),
+				'location' => $locations,
 				'menu_order' => 0,
 				'position' => 'normal',
 				'style' => 'default',
