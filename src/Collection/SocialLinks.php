@@ -12,7 +12,7 @@ class SocialLinks
 	/**
 	 * List of networks available.
 	 */
-	const CHOICES = [
+	const $choices = [
 		'facebook' => 'Facebook',
 		'twitter' => 'Twitter',
 		'instagram' => 'Instagram',
@@ -81,7 +81,7 @@ class SocialLinks
 									'class' => '',
 									'id' => '',
 								),
-								'choices' => apply_filters( self::FILTER, self::CHOICES ),
+								'choices' => apply_filters( self::FILTER, self::$choices ),
 								'default_value' => array(),
 								'allow_null' => 0,
 								'multiple' => 0,
