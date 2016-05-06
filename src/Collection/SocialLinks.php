@@ -12,7 +12,7 @@ class SocialLinks
 	/**
 	 * List of networks available.
 	 */
-	const $choices = [
+	private static $choices = [
 		'facebook' => 'Facebook',
 		'twitter' => 'Twitter',
 		'instagram' => 'Instagram',
