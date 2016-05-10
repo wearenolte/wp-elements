@@ -11,6 +11,8 @@ class SocialLinks
 {
 	/**
 	 * List of networks available.
+	 *
+	 * @var array
 	 */
 	private static $choices = [
 		'facebook' => 'Facebook',
