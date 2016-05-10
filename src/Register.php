@@ -60,7 +60,7 @@ class Register
 		foreach ( self::$_elements as $element => $locations ) {
 			$class = self::get_element_class_name( $element );
 
-			if ( is_callable( $class, 'init' ) ) {
+			if ( method_exists( $class, 'init' ) ) {
 				call_user_func( [ $class, 'init' ], $locations );
 			}
 		}
@@ -75,7 +75,7 @@ class Register
 	public static function get_default_location( $element ) {
 		$class = self::get_element_class_name( $element );
 
-		if ( is_callable( $class, 'get_default_location' ) ) {
+		if ( method_exists( $class, 'get_default_location' ) ) {
 			return call_user_func( [ $class, 'get_default_location' ] );
 		}
 
