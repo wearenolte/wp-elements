@@ -280,22 +280,22 @@ class Hero
 			return $value;
 		}
 
+		$new_value = [];
+
 		foreach ( $value as $index => $item ) {
+			$new_value[ $index ] = [
+				'type' => $item['type'],
+			];
+
 			if ( 'images' === $item['type'] ) {
-				unset( $value[ $index ]['video'] );
+				$new_value[ $index ]['images'] = $item['images'];
 			}
 
 			if ( 'video' === $item['type'] ) {
-				$value[ $index ]['video'] = Utils::get_video_embed_url( $item['video'] );
-				unset( $value[ $index ]['images'] );
-			}
-
-			if ( 'none' === $item['type'] ) {
-				unset( $value[ $index ]['images'] );
-				unset( $value[ $index ]['video'] );
+				$new_value[ $index ]['video'] = Utils::get_video_embed_url( $item['video'] );
 			}
 		}
 
-		return $value;
+		return $new_value;
 	}
 }
