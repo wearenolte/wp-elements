@@ -17,16 +17,21 @@ class Utils
 	 */
 	public static function get_video_embed_url( $url ) {
 		if ( strpos( $url, 'youtube' ) !== false && strpos( $url, 'watch' ) !== false ) {
-			parse_str( wp_parse_url( $url, PHP_URL_QUERY ) );
-			if ( isset( $v ) ) {
-				return 'https://www.youtube.com/embed/' . $v;
+			$parts = wp_parse_url( $url );
+
+			if ( is_array( $parts ) && isset( $parts['query'] ) ) {
+				parse_str( $parts['query'] );
+				if ( isset( $v ) ) {
+					return 'https://www.youtube.com/embed/' . $v;
+				}
 			}
 		}
 
 		if ( strpos( $url, 'vimeo' ) !== false && strpos( $url, 'player' ) === false ) {
-			$id = wp_parse_url( $url, PHP_URL_PATH );
-			if ( isset( $id ) ) {
-				return 'https://player.vimeo.com/video' . $id;
+			$parts = wp_parse_url( $url );
+
+			if ( is_array( $parts ) && isset( $parts['path'] ) ) {
+				return 'https://player.vimeo.com/video' . $parts['path'];
 			}
 		}
 
