@@ -7,8 +7,7 @@ use Lean\Elements\Utils;
  *
  * @package Lean\Elements\Collection
  */
-class Hero
-{
+class Hero {
 	const HEADLINE = 'field_5731d08981bb0';
 	const TAGLINE = 'field_5731d0a081bb1';
 	const BACKGROUND = 'field_5750768b22dc7';
@@ -145,7 +144,7 @@ class Hero
 								'max_size' => '',
 								'mime_types' => '',
 							),
-							array (
+							array(
 								'key' => 'field_57c4af53a7950',
 								'label' => 'Video',
 								'name' => 'video',
@@ -161,7 +160,7 @@ class Hero
 										),
 									),
 								),
-								'wrapper' => array (
+								'wrapper' => array(
 									'width' => '',
 									'class' => '',
 									'id' => '',
@@ -172,7 +171,7 @@ class Hero
 								'max_size' => '',
 								'mime_types' => 'mp4',
 							),
-							array (
+							array(
 								'key' => 'field_57c4af53a7951',
 								'label' => 'Fallback Image',
 								'name' => 'fallback_image',
@@ -188,7 +187,7 @@ class Hero
 										),
 									),
 								),
-								'wrapper' => array (
+								'wrapper' => array(
 									'width' => '',
 									'class' => '',
 									'id' => '',
