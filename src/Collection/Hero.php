@@ -326,7 +326,8 @@ class Hero {
 			}
 
 			if ( 'video' === $item['type'] ) {
-				$new_value[ $index ]['video'] = Utils::get_video_embed_url( $item['video'] );
+				$new_value[ $index ]['video'] = 'file' === $field['sub_fields'][2]['type']
+					? $item['video'] : Utils::get_video_embed_url( $item['video'] );
 				$new_value[ $index ]['fallback_image'] = $item['fallback_image'];
 			}
 		}
