@@ -7,8 +7,7 @@ use Lean\Elements\Utils;
  *
  * @package Lean\Elements\Collection
  */
-class Hero
-{
+class Hero {
 	const HEADLINE = 'field_5731d08981bb0';
 	const TAGLINE = 'field_5731d0a081bb1';
 	const BACKGROUND = 'field_5750768b22dc7';
@@ -146,12 +145,12 @@ class Hero
 								'mime_types' => '',
 							),
 							array(
-								'key' => 'field_575078219ea44',
+								'key' => 'field_57c4af53a7950',
 								'label' => 'Video',
 								'name' => 'video',
-								'type' => 'url',
-								'instructions' => 'The YouTube or Vimeo video url.',
-								'required' => 0,
+								'type' => 'file',
+								'instructions' => 'Upload the background video. MP4 only.',
+								'required' => 1,
 								'conditional_logic' => array(
 									array(
 										array(
@@ -166,8 +165,43 @@ class Hero
 									'class' => '',
 									'id' => '',
 								),
-								'default_value' => '',
-								'placeholder' => 'https://vimeo.com/66966424',
+								'return_format' => 'url',
+								'library' => 'all',
+								'min_size' => '',
+								'max_size' => '',
+								'mime_types' => 'mp4',
+							),
+							array(
+								'key' => 'field_57c4af53a7951',
+								'label' => 'Fallback Image',
+								'name' => 'fallback_image',
+								'type' => 'image',
+								'instructions' => 'Add an image to be used on mobile devices when the video can\'t be loaded',
+								'required' => 1,
+								'conditional_logic' => array(
+									array(
+										array(
+											'field' => 'field_575076d822dc8',
+											'operator' => '==',
+											'value' => 'video',
+										),
+									),
+								),
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'return_format' => 'array',
+								'preview_size' => 'thumbnail',
+								'library' => 'all',
+								'min_width' => 3200,
+								'min_height' => 1340,
+								'min_size' => '',
+								'max_width' => '',
+								'max_height' => '',
+								'max_size' => '',
+								'mime_types' => '',
 							),
 						),
 					),
@@ -292,7 +326,9 @@ class Hero
 			}
 
 			if ( 'video' === $item['type'] ) {
-				$new_value[ $index ]['video'] = Utils::get_video_embed_url( $item['video'] );
+				$new_value[ $index ]['video'] = 'file' === $field['sub_fields'][2]['type']
+					? $item['video'] : Utils::get_video_embed_url( $item['video'] );
+				$new_value[ $index ]['fallback_image'] = $item['fallback_image'];
 			}
 		}
 
